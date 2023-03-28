@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up </title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" 
+            class="appointment-form"
+             id="appointment-form">
+                <h2>Register Here!</h2>
+                <div class="form-group-1">
+                    <input type="text" name="user_name" id="user_name" class="user_name" placeholder="Enter Your User Name" required />
+                    <input type="text" placeholder="Date of Birth"
+                    onfocus="(this.type='date')" name="dob" id="dob" class="dob" placeholder="Enter Your Dob" required />
+                    <input type="text" name="age" id="age" class="age" placeholder="Enter Your Age" required />
+                    <input type="text" name="dob" id="mobile" class="mobile" placeholder="Enter Your Mobile" required />
+                    <input type="text" name="email" id="email" class="email" placeholder="Enter Your Email Id" required />
+                    <input type="password" name="password" id="password" class="password" placeholder="Enter Your Password " required />
+
+                
+                </div>
+    
+                <div class="form-check">
+                    <label for="agree-term" class="label-agree-term"><span><span></span></span>Alreay Have an Account? 
+                         <a href="login.html" class="term-service"> Login</a></label>
+                </div>
+                <div class="form-submit">
+                    <input type="submit" onclick="return do_register();"  id="submit" class="submit" value="Signup Now" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+
+window.onload = function () {
+    var Dataget = JSON.parse(localStorage.getItem("G_userData"));
+
+if(Dataget){
+
+ window.location.href="profile.html";
+}
+};
+
+
+
+    </script>
+
+    <!-- JS -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

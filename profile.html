@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Details </title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body  style="background: #e7e7fc !important;">
+
+    <div class="main" style="display: flex;align-items: center;justify-content: center;">
+
+        <div class="container" style="margin-left: 0 !important;">
+            <form method="POST" class="appointment-form" id="appointment-form">
+                <h2>Profile Details!</h2>
+                <div class="form-group-1">
+                    <input 
+                        type="text" 
+                        name="user_name" 
+                        id="user_name" 
+                        class="user_name" 
+                        placeholder="Enter Your User Name" required 
+                    />
+                    <input 
+                        type="text" 
+                        name="dob" 
+                        id="dob" 
+                        class="dob" 
+                        placeholder="Enter Your Dob" required 
+                    />
+                    <input 
+                        type="text" 
+                        name="age" 
+                        id="age" 
+                        class="age" 
+                        placeholder="Enter Your Age" required 
+                    />
+                    <input 
+                        type="text" 
+                        name="dob" 
+                        id="mobile"
+                        class="mobile" 
+                        placeholder="Enter Your Mobile" required 
+                    />
+                    <input 
+                        type="text" 
+                        name="email" 
+                        id="email" 
+                        class="email" 
+                        placeholder="Enter Your Email Id" required 
+                    />
+                    <input 
+                        type="hidden" 
+                        name="id" 
+                        id="id" 
+                        class="id" 
+                        placeholder="Enter Your Email Id" required 
+                    />
+
+                </div>
+    
+    
+                <div class="form-submit" style="display: flex;justify-content: space-around;">
+                    <input 
+                        onclick="return do_update();" 
+                        name="submit" 
+                        type="button"
+                        id="submit" 
+                        class="submit" 
+                        value="Edit Profile" 
+                    />
+                    <input 
+                        style="background: red !important" 
+                        onclick="return confirm('Are you sure to logout?')?do_logout():'';" 
+                        type="button"
+                        name="submit" 
+                        id="submit" 
+                        class="submit" 
+                        value="Logout" 
+                    />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            get_profileInfo(); 
+        };
+    </script>
+
+    <!-- JS -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/profil.js"></script>
+
+
+</body>
+</html>
