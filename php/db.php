@@ -1,5 +1,5 @@
 <?php
-$mysqli = mysqli_connect("localhost","root","","guvi");
+$mysqli = mysqli_connect("localhost","root","","guvii");
 
 // Check connection
 if (mysqli_connect_errno()) {
